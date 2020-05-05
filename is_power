@@ -1,0 +1,8 @@
+def is_power(a,b):
+    '''Determines if a is a power of b.'''
+    if a % b != 0: # exception handling
+        return False
+    elif a == b: # base case
+        return True
+    else:
+        return is_power((a/b),b) # sets a = a/b for recursion
